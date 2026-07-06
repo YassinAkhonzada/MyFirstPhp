@@ -381,5 +381,145 @@ $username = "";
 if (empty($username)) {
     echo "Gebruikersnaam is verplicht.";
 }
+// ===============================
+// EXTRA ONDERWERPEN
+// ===============================
 
+
+// ===============================
+// DO...WHILE
+// ===============================
+// Een do...while voert de code ALTIJD minimaal 1 keer uit.
+// Daarna controleert PHP pas de conditie.
+
+$i = 1;
+
+do {
+    echo "Getal: $i <br>";
+    $i++;
+} while ($i <= 5);
+
+// Uitvoer:
+// Getal: 1
+// Getal: 2
+// Getal: 3
+// Getal: 4
+// Getal: 5
+
+
+
+// ===============================
+// BREAK
+// ===============================
+// break stopt de lus direct.
+
+for ($i = 1; $i <= 10; $i++) {
+
+    if ($i == 5) {
+        break; // Stop bij 5
+    }
+
+    echo $i . "<br>";
+}
+
+// Uitvoer:
+// 1
+// 2
+// 3
+// 4
+
+
+
+// ===============================
+// CONTINUE
+// ===============================
+// continue slaat één ronde van de lus over.
+
+for ($i = 1; $i <= 5; $i++) {
+
+    if ($i == 3) {
+        continue; // Sla de 3 over
+    }
+
+    echo $i . "<br>";
+}
+
+// Uitvoer:
+// 1
+// 2
+// 4
+// 5
+
+
+
+// ===============================
+// SWITCH
+// ===============================
+// switch gebruik je als één variabele meerdere mogelijke waarden heeft.
+
+$dag = "maandag";
+
+switch ($dag) {
+
+    case "maandag":
+        echo "Vandaag is het maandag.<br>";
+        break;
+
+    case "dinsdag":
+        echo "Vandaag is het dinsdag.<br>";
+        break;
+
+    case "woensdag":
+        echo "Vandaag is het woensdag.<br>";
+        break;
+
+    default:
+        echo "Onbekende dag.<br>";
+}
+
+
+
+// ===============================
+// == EN ===
+// ===============================
+
+// == vergelijkt alleen de waarde.
+// PHP kijkt NIET naar het datatype.
+
+$a = 5;
+$b = "5";
+
+if ($a == $b) {
+    echo "== : Gelijk<br>";
+}
+
+// Uitvoer:
+// == : Gelijk
+
+
+
+// === vergelijkt de waarde EN het datatype.
+
+if ($a === $b) {
+    echo "=== : Identiek<br>";
+} else {
+    echo "=== : Niet identiek<br>";
+}
+
+// Uitvoer:
+// === : Niet identiek
+
+
+
+// Nog een voorbeeld
+
+$x = 10;
+$y = 10;
+
+if ($x === $y) {
+    echo "Beide zijn identiek.<br>";
+}
+
+// Uitvoer:
+// Beide zijn identiek.
 </ul>
